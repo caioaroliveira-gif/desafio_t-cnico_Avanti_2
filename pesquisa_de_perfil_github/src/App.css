@@ -1,0 +1,189 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #4b4b4b;
+}
+
+.github-container {
+  width: 100%;
+  max-width: 960px;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(0, 82, 255, 0.9) 0%,
+      rgba(0, 56, 187, 0.62) 18%,
+      rgba(0, 0, 0, 0) 45%
+    ),
+    #151515;
+  position: relative;
+}
+
+.github-container::before {
+  content: '';
+  width: 310px;
+  height: 310px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.35;
+  background-image: radial-gradient(#777 1px, transparent 1px);
+  background-size: 5px 5px;
+  mask-image: linear-gradient(to bottom right, black, transparent);
+}
+
+.content {
+  width: 100%;
+  max-width: 640px;
+  min-height: 260px;
+  padding: 42px 28px;
+  background-color: #000000;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 0 26px;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.github-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.search-form {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.search-form input {
+  width: 100%;
+  height: 42px;
+  border: 0;
+  outline: none;
+  padding: 0 14px;
+  border-radius: 5px 0 0 5px;
+  color: #222222;
+  font-size: 14px;
+}
+
+.search-form input::placeholder {
+  color: #757575;
+}
+
+.search-form button {
+  width: 48px;
+  border: 0;
+  border-radius: 0 5px 5px 0;
+  background-color: #005cff;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 17px;
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.search-form button:hover {
+  filter: brightness(1.15);
+}
+
+.search-form button:active {
+  transform: scale(0.96);
+}
+
+.loading {
+  margin: 26px 0 0;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.profile-card {
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin: 32px auto 0;
+  padding: 20px 24px;
+  border-radius: 14px;
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.profile-image {
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+  border: 3px solid #005cff;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info h2 {
+  margin: 0 0 10px;
+  color: #005cff;
+  font-size: 19px;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #242424;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.error-message {
+  max-width: 540px;
+  margin: 30px auto 0;
+  padding: 16px 22px;
+  border-radius: 6px;
+  background-color: #f7e4e4;
+  color: #dc2525;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 0;
+  }
+
+  .github-container {
+    min-height: 100vh;
+    padding: 24px 16px;
+  }
+
+  .content {
+    padding: 36px 18px;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 92px;
+    height: 92px;
+  }
+}
